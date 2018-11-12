@@ -1,0 +1,114 @@
+@import "reset";
+
+.mw {
+  width: @mainWidth;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.subject {
+  font-size: 26px;
+  text-align: center;
+}
+
+.fl {
+  float: left;
+}
+
+.fr {
+  float: right;
+}
+
+.cl {
+  clear: both;
+  &::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+}
+
+.mainBg {
+  background-color: @mainColor;
+}
+
+.grayBg {
+  background-color: @grayBg;
+}
+
+.ml5 {
+  margin-left: 5px;
+}
+
+.ml10 {
+  margin-left: 10px;
+}
+
+.ml20 {
+  margin-left: 20px;
+}
+
+.ml35 {
+  margin-left: 35px;
+}
+
+.ml50 {
+  margin-left: 50px;
+}
+
+.mr5 {
+  margin-right: 5px;
+}
+
+.mr10 {
+  margin-right: 10px;
+}
+
+.mt5 {
+  margin-top: 5px;
+}
+
+.mt10 {
+  margin-top: 10px;
+}
+
+.mt20 {
+  margin-top: 20px;
+}
+
+.mt25 {
+  margin-top: 25px;
+}
+
+.mt50 {
+  margin-top: 50px;
+}
+
+.pr45 {
+  padding-right: 45px;
+}
+
+.pl45 {
+  padding-left: 45px;
+}
+
+.pl35 {
+  padding-left: 35px;
+}
+
+/*动画*/
+.am051 {
+  transition: all .5s ease-in-out;
+  -webkit-transition: all .5s ease-in-out;
+}
+
+.loop(@n) when (@n>0) {
+  .c@{n} {
+    background-image: url("../../assets/img/case/@{n}.png");
+  }
+  .loop((@n - 1));
+}
+
+.loop(12);
+
+
