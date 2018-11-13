@@ -1,5 +1,11 @@
 @import "reset";
 
+html, body {
+  font-size: 14px;
+  color: white;
+  background-color: #338ae6;
+}
+
 .mw {
   width: @mainWidth;
   margin: 0 auto;
@@ -101,14 +107,5 @@
   transition: all .5s ease-in-out;
   -webkit-transition: all .5s ease-in-out;
 }
-
-.loop(@n) when (@n>0) {
-  .c@{n} {
-    background-image: url("../../assets/img/case/@{n}.png");
-  }
-  .loop((@n - 1));
-}
-
-.loop(12);
 
 
